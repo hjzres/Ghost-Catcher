@@ -7,11 +7,25 @@ namespace player
 		[Header("Movement")]
 		[SerializeField] [ReadOnly] private float moveSpeed;
 		[SerializeField] private float walkSpeed;
+		private float WalkSpeed
+		{
+			get
+			{
+				isRunning = false;
+				return walkSpeed;
+			}
+			set
+			{
+				walkSpeed = value;
+			}
+		}
 		[SerializeField] private float runSpeed;
-		public float RunSpeed{
+		private float RunSpeed
+		{
 			get
 			{
 				if(_rb.velocity.x != 0 && _rb.velocity.z != 0) UseStamina();
+				isRunning = true;
 				return runSpeed;
 			}
 			set
@@ -22,9 +36,10 @@ namespace player
 		[SerializeField] private float groundDrag;
 
 		[Header("Stamina")]
-		[SerializeField] [Min(0)] private float maxStamina;
 		[SerializeField] [ReadOnly] private float stamina;
+		[SerializeField] [Min(0)] private float maxStamina;
 		private float _staminaTime;
+		public bool isRunning{ get; private set;}
 
 		[Header("Jump")]
 		[SerializeField] private float jumpForce;
@@ -96,7 +111,7 @@ namespace player
 		private void MovePlayer()
 		{
 			_moveDirection = orientation.forward * _verticalInput + orientation.right * _horizontalInput;
-			moveSpeed = Input.GetKey(sprintKey) && stamina > 0 ? RunSpeed : walkSpeed;
+			moveSpeed = Input.GetKey(sprintKey) && stamina > 0 ? RunSpeed : WalkSpeed;
 
 			if(_isGrounded)
 				_rb.AddForce(_moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);

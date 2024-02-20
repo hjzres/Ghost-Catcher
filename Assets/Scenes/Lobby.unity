@@ -231,6 +231,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensitivity: 400
   orentation: {fileID: 997253145}
+  WalkFOV: 60
+  runFOV: 0
+  FOVMultiplier: 1.1
 --- !u!114 &42300385
 MonoBehaviour:
   m_ObjectHideFlags: 0
