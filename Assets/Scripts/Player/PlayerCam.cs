@@ -8,8 +8,8 @@ namespace player
 
 		[SerializeField] private Transform orentation;
 
-		private float xRotation;
-		private float yRotation;
+		private float _xRotation;
+		private float _yRotation;
 
 		private void Awake(){
 			Cursor.lockState = CursorLockMode.Locked;
@@ -20,12 +20,12 @@ namespace player
 			float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensitivity; 
 			float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensitivity; 
 
-			yRotation += mouseX;
-			xRotation -= mouseY;
-			xRotation = Mathf.Clamp(xRotation, -90, 90);
+			_yRotation += mouseX;
+			_xRotation -= mouseY;
+			_xRotation = Mathf.Clamp(_xRotation, -90, 90);
 
-			transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
-			orentation.rotation = Quaternion.Euler(0, yRotation, 0);
+			transform.rotation = Quaternion.Euler(_xRotation, _yRotation, 0);
+			orentation.rotation = Quaternion.Euler(0, _yRotation, 0);
 
 		}
 	}
