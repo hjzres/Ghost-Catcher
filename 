@@ -1,0 +1,71 @@
+[33mcommit 14d9422f28160b0bb4681066e3fa44cfab278071[m[33m ([m[1;36mHEAD[m[33m, [m[1;31morigin/dev[m[33m, [m[1;31morigin/customattributes[m[33m, [m[1;31morigin/Player-Movement/camera[m[33m, [m[1;32mdev[m[33m, [m[1;32mcustomattributes[m[33m, [m[1;32mPlayer-Movement/camera[m[33m)[m
+Author: Andrei <142443853+hjzres@users.noreply.github.com>
+Date:   Mon Feb 19 23:53:19 2024 -0500
+
+    Made ReadOnly Attribute
+
+[33mcommit d48b65ad96ce9ad3d5844e3619d8b5dbfc190760[m
+Author: Andrei <142443853+hjzres@users.noreply.github.com>
+Date:   Mon Feb 19 23:40:24 2024 -0500
+
+    reogranized script
+
+[33mcommit 9c364803af981553f17350728a22c04265af5b42[m
+Author: Andrei <142443853+hjzres@users.noreply.github.com>
+Date:   Mon Feb 19 23:30:13 2024 -0500
+
+    Added sprinting mechanic
+
+[33mcommit 0a63cddec9bf787a34b3857bf51a48e33bc4cd24[m
+Author: Andrei <142443853+hjzres@users.noreply.github.com>
+Date:   Mon Feb 19 23:23:11 2024 -0500
+
+    Organized the PlayerMovement script
+
+[33mcommit d6f181ddb716a9c272dd7cc4e4391285f9f94ee8[m
+Author: Andrei <142443853+hjzres@users.noreply.github.com>
+Date:   Mon Feb 19 22:55:25 2024 -0500
+
+    working URP
+
+[33mcommit 45ef0ee87b07cf1df543845d06ddabfb7eedfe41[m
+Author: Andrei <142443853+hjzres@users.noreply.github.com>
+Date:   Mon Feb 19 22:45:28 2024 -0500
+
+    Done Player Movement
+
+[33mcommit 8e7d55cb9658aa2a5722ef4e3db0e11f7d2154f5[m[33m ([m[1;31morigin/Player-Movement/Camera[m[33m)[m
+Author: Andrei <142443853+hjzres@users.noreply.github.com>
+Date:   Thu Jan 18 10:30:07 2024 -0500
+
+    #1 - Added player movement script + player cam script + made camera in player
+
+[33mcommit e7cd96d94995bd02d59ddc61f289e0d721077519[m
+Author: Andrei <142443853+hjzres@users.noreply.github.com>
+Date:   Thu Jan 18 10:27:07 2024 -0500
+
+    Added a player
+
+[33mcommit 01bca214d11a2f7b5b0e361266dc4fb3afd9edf5[m[33m ([m[1;31morigin/Dev[m[33m)[m
+Author: Andrei <142443853+hjzres@users.noreply.github.com>
+Date:   Thu Jan 18 10:25:30 2024 -0500
+
+    Added a Material Template
+
+[33mcommit 377c972a1d9e24edb42d8d23d2eb6d92b208aedc[m
+Author: Andrei <142443853+hjzres@users.noreply.github.com>
+Date:   Thu Jan 18 10:19:58 2024 -0500
+
+    put a platform in the lobby
+
+[33mcommit 5d3cc191d6c68bd081466733b72f36b6a81bfe11[m
+Author: Andrei <142443853+hjzres@users.noreply.github.com>
+Date:   Thu Jan 18 10:15:44 2024 -0500
+
+    Setup Project
+
+[33mcommit 7a10a59898cb141d0fa6c07d48580a8b681a93ff[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: Andrei <142443853+hjzres@users.noreply.github.com>
+Date:   Thu Jan 18 10:04:42 2024 -0500
+
+    Initial commit
