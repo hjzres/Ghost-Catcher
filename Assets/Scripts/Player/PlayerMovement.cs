@@ -11,7 +11,7 @@ namespace player
 		public float RunSpeed{
 			get
 			{
-				UseStamina();
+				if(_rb.velocity.x != 0 && _rb.velocity.z != 0) UseStamina();
 				return runSpeed;
 			}
 			set
