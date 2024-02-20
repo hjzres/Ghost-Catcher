@@ -233,7 +233,7 @@ MonoBehaviour:
   orentation: {fileID: 997253145}
   WalkFOV: 60
   runFOV: 0
-  FOVMultiplier: 1.1
+  FOVMultiplier: 1.25
 --- !u!114 &42300385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,8 +357,8 @@ MonoBehaviour:
   walkSpeed: 5
   runSpeed: 8
   groundDrag: 5
-  maxStamina: 100
   stamina: 0
+  maxStamina: 100
   jumpForce: 12
   jumpCooldown: 0.25
   airMultiplier: 0.4

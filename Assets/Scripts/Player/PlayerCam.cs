@@ -34,6 +34,8 @@ namespace player
 
 		private void Update()
 		{
+			_camera.fieldOfView = _playerMovement.isRunning ? runFOV : WalkFOV;
+			
 			float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensitivity; 
 			float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensitivity; 
 
@@ -43,12 +45,6 @@ namespace player
 
 			transform.rotation = Quaternion.Euler(_xRotation, _yRotation, 0);
 			orentation.rotation = Quaternion.Euler(0, _yRotation, 0);
-
-		}
-		
-		private void FOVManager()
-		{
-			
 		}
 	}
 }
