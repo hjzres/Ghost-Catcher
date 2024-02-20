@@ -104,7 +104,8 @@ namespace player
 				_rb.AddForce(_moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
 		}
 
-		private void SpeedControl(){
+		private void SpeedControl()
+		{
 			Vector3 flatVel = new Vector3(_rb.velocity.x, 0f, _rb.velocity.z);
 
 			if(flatVel.magnitude > moveSpeed)
@@ -114,18 +115,21 @@ namespace player
 			}
 		}
 
-		private void Jump(){
+		private void Jump()
+		{
 			_rb.velocity = new Vector3(_rb.velocity.x, 0f, _rb.velocity.z);
 
 			_rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
 
 		}
 
-		private void ResetJump(){
+		private void ResetJump()
+		{
 			_readyToJump = true;
 		}
 
-		private void RegenStamina(){
+		private void RegenStamina()
+		{
 			if(_staminaTime < 2f)
 			{
 				_staminaTime += Time.deltaTime;
@@ -136,7 +140,8 @@ namespace player
 			}
 		}
 
-		private void UseStamina(){
+		private void UseStamina()
+		{
 			_staminaTime = 0;
 			stamina -= 20 * Time.deltaTime;
 		}
