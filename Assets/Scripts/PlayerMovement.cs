@@ -5,7 +5,9 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
-    public float MoveSpeed;
+    [SerializeField] private float walkSpeed;
+    [SerializeField] private float runSpeed;
+    private float _moveSpeed;
 
     [SerializeField] private float groundDrag;
     [SerializeField] private float jumpForce;
@@ -15,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Keybinds")]
     [SerializeField] private KeyCode jumpKey = KeyCode.Space;
+    [SerializeField] private KeyCode sprintKey = KeyCode.LeftShift;
 
 
     [Header("Ground Check")]
@@ -68,18 +71,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer(){
         _moveDirection = orientation.forward * _verticalInput + orientation.right * _horizontalInput;
+        _moveSpeed = Input.GetKey(sprintKey) ? runSpeed : walkSpeed;
 
         if(_isGrounded)
-            _rb.AddForce(_moveDirection.normalized * MoveSpeed * 10f, ForceMode.Force);
+            _rb.AddForce(_moveDirection.normalized * _moveSpeed * 10f, ForceMode.Force);
         else if(!_isGrounded)
-            _rb.AddForce(_moveDirection.normalized * MoveSpeed * 10f * airMultiplier, ForceMode.Force);
+            _rb.AddForce(_moveDirection.normalized * _moveSpeed * 10f * airMultiplier, ForceMode.Force);
     }
 
     private void SpeedControl(){
         Vector3 flatVel = new Vector3(_rb.velocity.x, 0f, _rb.velocity.z);
 
-        if(flatVel.magnitude > MoveSpeed){
-            Vector3 limitedVel = flatVel.normalized * MoveSpeed;
+        if(flatVel.magnitude > _moveSpeed){
+            Vector3 limitedVel = flatVel.normalized * _moveSpeed;
             _rb.velocity = new Vector3(limitedVel.x, _rb.velocity.y, limitedVel.z);
         }
     }
