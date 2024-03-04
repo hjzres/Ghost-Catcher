@@ -1,2 +1,4 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Label tabindex="-1" text="Ghost Catcher" parse-escape-sequences="true" display-tooltip-when-elided="true" style="align-items: auto; justify-content: space-around; align-self: center; font-size: 27px; color: rgb(255, 255, 255); -unity-text-outline-color: rgba(0, 0, 0, 0); -unity-text-outline-width: 1px;" />
+    <ui:VisualElement style="flex-grow: 1; width: 410px; height: 10px; align-self: flex-end; justify-content: space-between; align-items: stretch; -unity-background-image-tint-color: rgb(255, 0, 0);" />
 </ui:UXML>
