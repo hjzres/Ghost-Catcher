@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class Ghost : MonoBehaviour
 {
-	[SerializeField] private float speed;
+	[Header("Ghost Properties")]
+	public GhostScriptableObject ghostType;
+	[SerializeField] [ReadOnly] private float speed;
+	[SerializeField] [ReadOnly] private bool isWalking;
+	
 	[SerializeField] private Difficulty difficulty;
 	private enum Difficulty
 	{
